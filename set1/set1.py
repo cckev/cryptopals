@@ -162,6 +162,7 @@ def transpose_blocks(data, blocksize=0):
 
 """
 Finds number of repeating blocks in a given plaintext string
+This can be used to detect AES in ECB mode
 Returns number of repeats
 """
 def find_repeating_blocks(data, blocksize=16):
