@@ -1,15 +1,18 @@
 #ifndef ARITH_H
 #define ARITH_H
 
+#include <iostream>
 #include <vector>
-#include <valarray>
+#include <cassert>
 
 std::vector<unsigned char> XorHex(std::vector<unsigned char> h1, std::vector<unsigned char> h2) {
-	std::valarray<unsigned char> h_1(h1.data(), h1.size());
-	std::valarray<unsigned char> h_2(h2.data(), h2.size());
-	std::valarray<unsigned char> temp = h_1 ^ h_2;
+	assert(h1.size() == h2.size());
+	std::size_t n = h1.size();
 	std::vector<unsigned char> res;
-	res.assign(std::begin(temp), std::end(temp));
+	res.reserve(n);
+	for (std::size_t i = 0; i < n; i++) {
+		res.push_back(h1[i] ^ h2[i]);
+	}
 	return res;
 }
 
