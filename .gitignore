@@ -124,4 +124,6 @@ dmypy.json
 .pyre/
 
 # Custom
-set2/users.json
+*.json
+*.exe
+*.txt
