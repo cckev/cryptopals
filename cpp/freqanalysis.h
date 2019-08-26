@@ -3,6 +3,7 @@
 
 #include <map>
 #include <vector>
+#include <tuple>
 
 static const std::string CHARS_ALPHA_UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
@@ -38,5 +39,12 @@ static std::map<unsigned char, double> DEFAULT_TABLE = {
 * Higher scores indicate a greater deviation from normal frequency.
 */
 double ScorePlaintext(std::vector<unsigned char> plaintext);
+
+
+/*
+* Returns the most likely byte array result of single character XOR encoding and its score
+*/
+std::tuple <std::vector<unsigned char>, double> GetSingleCharXorPt(std::string plaintext);
+
 
 #endif // FREQ_ANALYSIS_H
