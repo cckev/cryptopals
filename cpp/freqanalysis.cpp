@@ -36,7 +36,7 @@ double ScorePlaintext(std::vector<unsigned char> plaintext) {
 }
 
 
-std::tuple <std::vector<unsigned char>, double> GetSingleCharXorPt(std::string plaintext) {
+std::tuple<std::vector<unsigned char>, double> GetSingleCharXorPt(std::string plaintext) {
 	std::vector<unsigned char> pre_xor = ParseHex(plaintext);
 	unsigned int len = pre_xor.size();
 	double best_score = std::numeric_limits<double>::max();

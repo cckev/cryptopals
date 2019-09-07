@@ -127,3 +127,4 @@ dmypy.json
 *.json
 *.exe
 *.txt
+cpp/debug/
